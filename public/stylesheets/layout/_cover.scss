@@ -20,6 +20,10 @@
     color: $white;
     font-weight: 100;
     
+    @include breakpoint(tablet) {
+      font-size: 45px;
+    }
+
     @include breakpoint(desktop) {
       font-size: 60px;
     }
@@ -32,12 +36,16 @@
     color: rgba($white, .75);
     margin-bottom: 20px;
 
+    @include breakpoint(tablet) {
+      font-size: 25px;
+      margin-left: auto;
+      margin-right: auto;
+      width: 600px;
+    }
+
     @include breakpoint(desktop) {
       font-size: 30px;
       line-height: 40px;
-      width: 600px;
-      margin-left: auto;
-      margin-right: auto;
     }
   }
 }

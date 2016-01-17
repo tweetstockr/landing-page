@@ -3,7 +3,7 @@
   padding-bottom: 50px;
   text-align: center;
 
-  @include breakpoint(desktop) {
+  @include breakpoint(tablet) {
     padding-top: 225px;
     padding-bottom: 100px;
   }
@@ -12,6 +12,10 @@
     font-size: 35px;
     color: #5e5e5e;
     font-weight: 300;
+    
+    @include breakpoint(tablet) {
+      font-size: 45px;
+    }
 
     @include breakpoint(desktop) {
       font-size: 60px;
@@ -25,8 +29,7 @@
     margin-top: 30px;
     line-height: 24px;
 
-
-    @include breakpoint(desktop) {
+    @include breakpoint(tablet) {
       font-size: 25px;
       line-height: 30px;
       width: 450px;
