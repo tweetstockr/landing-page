@@ -29,6 +29,9 @@
     @include breakpoint(desktop) {
       font-size: 25px;
       line-height: 30px;
+      width: 450px;
+      margin-left: auto;
+      margin-right: auto;
     }
   }
 }
