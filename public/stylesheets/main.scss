@@ -1,0 +1,170 @@
+$color-primary: #262B35;
+$color-secondary: #fff;
+$white: #fff;
+$black: #000;
+
+@import "vendors/bootstrap/bootstrap";
+@import "_responsive";
+
+img {
+  width: 100%;
+}
+
+.container-fluid {
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  @include breakpoint(desktop) {
+    padding-left: 5.625rem;
+    padding-right: 5.625rem;
+  }
+}
+
+.cover {
+  background-color: $color-primary;
+  background-image: url('../images/cover-background.png');
+  background-size: contain;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  padding-top: 30px;
+  padding-bottom: 150px;
+  position: relative;
+
+  @include breakpoint(desktop) {
+    padding-bottom: 350px;
+  }
+}
+
+.header {
+  text-align: center;
+
+  @include breakpoint(desktop) {
+    text-align: left;
+  }
+}
+
+.nav {
+  display: none;
+  float: right;
+
+  @include breakpoint(desktop) {
+    display: block;
+  }
+
+  li {
+    display: inline-block;
+    margin-left: 30px;
+    text-transform: uppercase;
+  }
+
+  a {
+    color: $white;
+    
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.cover-hero {
+  text-align: center;
+  padding-top: 50px;
+
+  @include breakpoint(desktop) {
+    padding-top: 100px;
+  }
+
+  h1 {
+    font-size: 35px;
+    text-transform: uppercase;
+    color: $white;
+    font-weight: 100;
+    margin-bottom: 20px;
+    
+    @include breakpoint(desktop) {
+      font-size: 60px;
+    }
+  }
+
+  h2 {
+    font-size: 20px;
+    font-weight: 100;
+    line-height: 30px;
+    color: rgba($white, .75);
+    margin-bottom: 50px;
+
+    @include breakpoint(desktop) {
+      font-size: 30px;
+      line-height: 40px;
+    }
+  }
+}
+
+.graph {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: $white;
+  border: 1px solid #ddd;
+  width: 250px;
+  bottom: -75px;
+  height: 175px;
+  border-radius: 3px;
+
+  @include breakpoint(desktop) {
+    height: 375px;
+    width: 750px;
+    border-radius: 5px;
+    bottom: -100px;
+  }  
+}
+
+.content {
+  padding-top: 150px;
+  padding-bottom: 50px;
+  text-align: center;
+
+  @include breakpoint(desktop) {
+    padding-top: 225px;
+    padding-bottom: 100px;
+  }
+
+  h2 {
+    font-size: 35px;
+    color: #5e5e5e;
+    font-weight: 300;
+
+    @include breakpoint(desktop) {
+      font-size: 60px;
+    }
+  }
+
+  h3 {
+    font-size: 18px;
+    color: #999;
+    font-weight: 300;
+    margin-top: 30px;
+    line-height: 24px;
+
+
+    @include breakpoint(desktop) {
+      font-size: 25px;
+      line-height: 30px;
+    }
+  }
+}
+
+.footer {
+  background: url('../images/waves.png') top center;
+  background-size: cover;
+  text-align: center;
+  padding-top: 400px;
+  padding-bottom: 30px;
+
+  p {
+    color: $white;
+    margin-bottom: 0;
+  }
+}
