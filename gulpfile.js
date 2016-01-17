@@ -76,7 +76,6 @@ gulp.task('build:styles', ['clean:dist'], function() {
       cascade: true,
       remove: true
     }))
-    .pipe(gulp.dest(paths.styles.output))
     .pipe(minify({
       discardComments: {
         removeAll: true
