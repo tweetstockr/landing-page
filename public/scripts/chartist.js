@@ -10,8 +10,7 @@ var seq = 0
   , durations = 500;
 
 new Chartist.Line('.ct-chart', data, {
-  showArea: true,
-  height: 300
+  showArea: true
 }).on('created', function() {
   seq = 0;
 }).on('draw', function(data) {

@@ -12,14 +12,24 @@
 
 .graph  {
   .ct-chart-line {
-    top: 70px;
+    top: 5px;
+
+    @include breakpoint(desktop) {
+      top: 70px;
+      height: 300px !important;
+    }
   }
 
   h3 {
-    margin-left: 30px;
-    font-weight: 300;
-    color: $color-primary;
-    font-size: 26px;
-    margin-top: 20px;
+    display: none;
+
+    @include breakpoint(desktop) {
+      display: block;
+      margin-left: 30px;
+      font-weight: 300;
+      color: $color-primary;
+      font-size: 26px;
+      margin-top: 20px;
+    }
   }
 }
