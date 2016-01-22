@@ -1,0 +1,15 @@
+.press {
+  padding-top: 75px;
+  text-align: center;
+
+  li {
+    width: 200px;
+    display: inline-block;
+
+    &:first-child {
+      img {
+        width: 100px;
+      }
+    }
+  }
+}

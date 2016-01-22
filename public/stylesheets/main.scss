@@ -1,14 +1,19 @@
-@import "components/_variables";
+@import "helpers/_variables";
 @import "vendors/bootstrap/bootstrap";
-@import "components/_responsive";
-@import "components/_reset";
+
+@import "helpers/_responsive";
+@import "helpers/_reset";
+
+@import "components/header";
+@import "components/footer";
 
 @import "layout/content";
 @import "layout/cover";
-@import "layout/footer";
 @import "layout/graph";
-@import "layout/header";
 @import "layout/nav";
+@import "layout/about";
+@import "layout/press";
+@import "layout/team";
 
 .graph  {
   .ct-chart-line {

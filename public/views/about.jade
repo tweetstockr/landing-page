@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+html(lang="en")
+head
+  meta(charset="UTF-8")
+  title Document
+  link(rel="stylesheet", href="stylesheets/main.css")
+    
+body
+  include ./partials/header.jade
+
+  section.team
+    .container-fluid
+      .col-md-6
+        img(src="images/bukinoshita.jpg", alt="")
+        a(href="") @BuKinoshita
+
+      .col-md-6
+        img(src="images/rapha.jpg", alt="")
+        a(href="") @raphaelgmelo
+
+  section.about
+    .container-fluid
+      h1 About us
+
+      p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae dolorem earum molestiae ipsum id, voluptas ipsam nobis, odio dolorum perferendis nulla, deleniti laborum ratione. Et reprehenderit nemo autem doloremque harum?
+      
+      ul
+        li
+          a(href="")
+            include ./icons/twitter
+
+        li
+          a(href="")
+            include ./icons/facebook
+
+        li
+          a(href="")
+            include ./icons/github
+
+  section.press
+    .container-fluid
+      ul
+        li
+          img(src="images/betalist.png", alt="")
+        li
+          img(src="images/product-hunt.png", alt="")
+
+  include ./partials/footer
