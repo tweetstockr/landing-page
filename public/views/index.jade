@@ -23,7 +23,7 @@ body
           | Sign up with Twitter
 
       .graph.ct-chart.ct-perfect-fourth
-        h3 #Tweetstockr
+        h3#trendName
 
   .content
     .container-fluid
@@ -32,8 +32,15 @@ body
 
       img(src="images/tweetstockr-iPad-Macbook-Mockup.png", alt="")
 
+  .earn
+    .container-fluid
+      .col-md-4
+        
+      .col-md-8
+
   include ./partials/footer
 
   script(src="../bower_components/jquery/dist/jquery.js")
+  script(src="https://cdn.socket.io/socket.io-1.4.3.js")
   script(src="../bower_components/chartist/dist/chartist.js")
   script(src="scripts/main.js")

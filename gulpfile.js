@@ -89,6 +89,7 @@ gulp.task('build:scripts', ['clean:dist'], function() {
   return gulp.src(paths.scripts.input)
     .pipe(plumber())
     .pipe(concat('main.js'))
+    .pipe(uglify())
     .pipe(gulp.dest(paths.scripts.output))
 });
 

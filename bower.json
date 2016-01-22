@@ -19,6 +19,7 @@
   ],
   "dependencies": {
     "jquery": "~2.2.0",
-    "chartist": "~0.9.5"
+    "chartist": "~0.9.5",
+    "socket-io": "~1.0.0"
   }
 }
