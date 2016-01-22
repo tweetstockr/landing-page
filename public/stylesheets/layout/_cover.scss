@@ -49,3 +49,14 @@
     }
   }
 }
+
+.btn-twitter {
+  padding-top: 12px;
+  padding-bottom: 10px;
+      
+  svg {
+    width: 20px;
+    fill: $white;
+    vertical-align: middle;
+  }
+}
