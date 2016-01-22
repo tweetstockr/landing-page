@@ -6,6 +6,7 @@ head
   
   meta(name="viewport" content="width=device-width, initial-scale=1")
 
+  link(rel="stylesheet" href="http://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css")
   link(rel="stylesheet", href="stylesheets/main.css")
 
 body
@@ -36,8 +37,6 @@ body
             li
               a(href="#") About
             li
-              a(href="#") Team
-            li
               a(href="#") Contact
             li.btn.btn-success
               a(href="#") Login
@@ -49,9 +48,8 @@ body
         a(href="#" class="btn btn-twitter")
           | Sign up with Twitter
 
-      .graph
-
-
+      .graph.ct-chart.ct-perfect-fourth
+        h3 #Tweetstockr
 
   .content
     .container-fluid
@@ -75,3 +73,7 @@ body
           img(src="images/instagram-icon.svg", alt="")
 
     p © Copyright 2016 Tweetstockr
+
+  script(src="../bower_components/jquery/dist/jquery.js")
+  script(src="../bower_components/chartist/dist/chartist.js")
+  script(src="scripts/main.js")

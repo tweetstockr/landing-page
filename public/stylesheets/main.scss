@@ -9,3 +9,17 @@
 @import "layout/graph";
 @import "layout/header";
 @import "layout/nav";
+
+.graph  {
+  .ct-chart-line {
+    top: 70px;
+  }
+
+  h3 {
+    margin-left: 30px;
+    font-weight: 300;
+    color: $color-primary;
+    font-size: 26px;
+    margin-top: 20px;
+  }
+}
