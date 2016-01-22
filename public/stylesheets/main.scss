@@ -17,6 +17,15 @@
 @import "layout/earn";
 
 .graph  {
+  .ct-line,
+  .ct-point {
+    stroke: $color-primary;
+  }
+
+  .ct-area {
+    fill: $color-primary;
+  }
+
   .ct-chart-line {
     top: 5px;
 
