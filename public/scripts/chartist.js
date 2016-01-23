@@ -24,15 +24,16 @@ socket.on('update', function(msg) {
   console.log('Time: ', time);
   console.log('Data: ', graphData);
 
-  for(var i = 0; i < trend.history.length; i++) {
+  for(var i = 9; i > 0; i--) {
     console.log('History: ', trend.history[i]);
+    var graphData = data.series[0];
     var price = trend.history[i].price;
     var hours = new Date(trend.history[i].created).getHours();
     var minutes = new Date(trend.history[i].created).getMinutes();
     var time = hours + ':' + minutes;
 
     graphData.push(price);
-    data.labels.push(time);
+    data.labels.push(time);  
   }
 
   $('#trendName').html(trend.name);
