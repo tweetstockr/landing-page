@@ -48,3 +48,33 @@
     }
   }
 }
+
+.contact {
+  padding-top: 175px;
+  max-width: 750px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+
+  h1 {
+    font-size: 50px;
+    font-weight: 300;
+    color: $color-primary;
+  }
+
+  h2 {
+    font-size: 20px;
+    margin-bottom: 50px;
+    font-weight: 300;
+  }
+
+  .form-control {
+    height: 65px;
+    margin-bottom: 30px;
+  }
+
+  .btn {
+    height: 65px;
+    font-size: 20px;
+  }
+}
