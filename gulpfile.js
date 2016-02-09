@@ -93,7 +93,7 @@ gulp.task('build:scripts', function() {
 gulp.task('lint:scripts', function () {
   return gulp.src(paths.scripts.input)
     .pipe(plumber())
-    .pipe(jshint())
+    .pipe(jshint('.jshintrc'))
     .pipe(jshint.reporter('jshint-stylish'));
 });
 

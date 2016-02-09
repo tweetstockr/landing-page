@@ -1,32 +1,28 @@
+'use strict';
+
 var socket = io('http://api.tweetstockr.com/'); // Este é o endereço da API
-​
+
 socket.on('connect', function(){
   console.log('connected!');
   socket.emit('update-me');
 });
 
 var data = {
-  labels: [],
-  series: [
-    []
-  ]
+    labels: []
+  , series: [
+      []
+    ]
 };
 
 var seq = 0
   , delays = 80
   , durations = 500;
-​
+
 socket.on('update', function(msg) {
   var trend = msg[0];
   var graphData = data.series[0];
 
-  console.log('Trend: ', trend);
-  console.log('Time: ', time);
-  console.log('Data: ', graphData);
-
   for(var i = 9; i > 0; i--) {
-    console.log('History: ', trend.history[i]);
-    var graphData = data.series[0];
     var price = trend.history[i].price;
     var hours = new Date(trend.history[i].created).getHours();
     var minutes = new Date(trend.history[i].created).getMinutes();
@@ -39,11 +35,11 @@ socket.on('update', function(msg) {
   $('#trendName').html(trend.name);
 
   new Chartist.Line('.ct-chart', data, {
-    showArea: true
-  }).on('created', function() {
-    seq = 0;
-  }).on('draw', function(data) {
-    seq++;
+      showArea: true
+    }).on('created', function() {
+      seq = 0;
+    }).on('draw', function(data) {
+      seq++;
 
     if(data.type === 'line') {
       data.element.animate({
