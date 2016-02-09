@@ -52,14 +52,7 @@ var paths = {
  * Gulp Taks
  */
 
-// Remove pre-existing content from output and test folders
-gulp.task('clean:dist', function () {
-  del.sync([
-    paths.output
-  ]);
-});
-
-gulp.task('build:views', ['clean:dist'], function() {
+gulp.task('build:views', function() {
   return gulp.src(paths.views.input)
     .pipe(plumber())
     .pipe(jade())
@@ -67,7 +60,7 @@ gulp.task('build:views', ['clean:dist'], function() {
 });
 
 // Process, lint, and minify Sass files
-gulp.task('build:styles', ['clean:dist'], function() {
+gulp.task('build:styles', function() {
   return gulp.src(paths.styles.input)
     .pipe(plumber())
     .pipe(sass({
@@ -88,7 +81,7 @@ gulp.task('build:styles', ['clean:dist'], function() {
 });
 
 // Lint, minify, and concatenate scripts
-gulp.task('build:scripts', ['clean:dist'], function() {
+gulp.task('build:scripts', function() {
   return gulp.src(paths.scripts.input)
     .pipe(plumber())
     .pipe(concat('main.js'))
@@ -105,7 +98,7 @@ gulp.task('lint:scripts', function () {
 });
 
 // Copy image files into output folder
-gulp.task('build:images', ['clean:dist'], function() {
+gulp.task('build:images', function() {
   return gulp.src(paths.images.input)
     .pipe(plumber())
     .pipe(gulp.dest(paths.images.output));
@@ -132,7 +125,6 @@ gulp.task('refresh', ['compile'], function () {
 // Compile files
 gulp.task('compile', [
     'lint:scripts'
-  , 'clean:dist'
   , 'build:views'
   , 'build:styles'
   , 'build:scripts'
