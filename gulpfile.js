@@ -153,4 +153,4 @@ gulp.task('watch', [
 gulp.task('deploy', ['compile'], function () {
   return gulp.src(paths.deploy)
     .pipe(ghPages());
-}
+});
