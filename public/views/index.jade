@@ -6,7 +6,7 @@ head
   
   meta(name="viewport" content="width=device-width, initial-scale=1")
 
-  link(rel="stylesheet" href="http://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css")
+  link(rel="stylesheet" href="bower/chartist/dist/chartist.min.css")
   link(rel="stylesheet", href="stylesheets/main.css")
 
 body
@@ -18,7 +18,7 @@ body
         h1 What's the next trend?
         h2 Tweetstockr is an Open Source Trending Topics Stock Market game.
 
-        a(href="http://localhost:4000/auth/twitter" class="btn btn-twitter")
+        a(href="http://api.tweetstockr.com/auth/twitter" class="btn btn-twitter")
           include ./icons/twitter
           | Sign up with Twitter
 
@@ -34,7 +34,7 @@ body
 
   include ./partials/footer
 
-  script(sr="bower/jquery/dist/jquery.js")
+  script(sr="bower/jquery/dist/jquery.min.js")
   script(sr="bower/socket.io-client/socket.io.js")
-  script(sr="bower/chartist/dist/chartist.js")
+  script(sr="bower/chartist/dist/chartist.min.js")
   script(src="scripts/main.js")
