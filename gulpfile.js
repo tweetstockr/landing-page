@@ -14,7 +14,8 @@ var gulp = require('gulp')
   , stylish = require('jshint-stylish')
   , concat = require('gulp-concat')
   , uglify = require('gulp-uglify')
-  , prefix = require('gulp-autoprefixer');
+  , prefix = require('gulp-autoprefixer')
+  , ghPages= require('gulp-gh-pages');
 
 /**
  * Paths to project folders
@@ -43,6 +44,8 @@ var paths = {
       input: 'public/images/*'
     , output: 'dist/images'
   }
+
+  , deploy: 'dist/**/*'
 }
 
 /**
@@ -146,3 +149,8 @@ gulp.task('watch', [
     'listen'
   , 'default'
 ]);
+
+gulp.task('deploy', ['compile'], function () {
+  return gulp.src(paths.deploy)
+    .pipe(ghPages());
+}
