@@ -11,10 +11,25 @@ body
   section.contact
     .container-fluid
       h1 Stay Current!
-      h2 We will often send emails about new features, changelog, press and news. We will never spam you! :)
+      h2 We will often send emails about new features, changelog, press and news. We will never spam you! If you prefer, you can email us at 
+        a(href="mailto:playtweetstockr@gmail.com")
+          strong playtweetstockr@gmail.com
+        | .
+      
+      #mc_embed_signup
+        form(action="//tweetstockr.us12.list-manage.com/subscribe/post?u=b822b5cfe7127bea7d52d4610&amp;id=e5432a2f6e" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate)
+          #mc_embed_signup_scroll
+            input(type="email" value="" name="EMAIL" class="required email form-control" id="mce-EMAIL" placeholder="Enter your email")
 
-      fieldset.form-group
-        input(class="form-control" type="email" placeholder="Enter your email")
-        button.btn.btn-primary.btn-block Sign up
+            #mce-responses.clear
+              div(class="response" id="mce-error-response" style="display:none")
+              div(class="response" id="mce-success-response" style="display:none")
 
+            //- real people should not fill this in and expect good things - do not remove this or risk form bot signups
+            div(style="position: absolute; left: -5000px;" aria-hidden="true")
+              input(type="text" name="b_b822b5cfe7127bea7d52d4610_e5432a2f6e" tabindex="-1" value="")
+
+            .clear
+              input(type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-primary btn-block")
+              
   include ./partials/footer
