@@ -13,6 +13,7 @@
 @import "layout/press";
 @import "layout/team";
 @import "layout/earn";
+@import "layout/nav";
 
 @import "pages/about";
 @import "pages/contact";
@@ -53,6 +54,11 @@
 .carousel {
   position: relative;
   margin-top: 80px;
+  display: none;
+
+  @include breakpoint(tablet) {
+    display: block;
+  }
 }
 
 .carousel-item {
