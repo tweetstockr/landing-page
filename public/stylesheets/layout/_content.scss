@@ -1,43 +1,62 @@
 .content {
-  padding-top: 150px;
-  padding-bottom: 50px;
-  text-align: center;
+  padding-top: 125px;
+  padding-bottom: 235px;
 
   @include breakpoint(tablet) {
     padding-top: 225px;
   }
 
-  h2 {
-    font-size: 35px;
-    color: #5e5e5e;
-    font-weight: 300;
-    
-    @include breakpoint(tablet) {
-      font-size: 45px;
-    }
-
-    @include breakpoint(desktop) {
-      font-size: 60px;
-    }
+  @include breakpoint(desktop) {
+    padding-top: 150px;
   }
 
-  h3 {
-    font-size: 18px;
-    color: #999;
-    font-weight: 300;
-    margin-top: 30px;
-    line-height: 24px;
-
-    @include breakpoint(tablet) {
-      font-size: 25px;
-      line-height: 30px;
-      width: 450px;
-      margin-left: auto;
-      margin-right: auto;
-    }
+  .mockup {
+    width: 80%;
+    float: right;
   }
+}
 
-  img {
-    width: 75%;
+.content__title {
+  color: $gray;
+  font-weight: 100;
+  font-size: 30px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.content-block {
+  margin-top: 100px;
+}
+
+.content-block__title {
+  font-size: 32px;
+  color: $color-danger;
+  font-weight: 300;
+  margin: 40px 0;
+}
+
+.content-block__text {
+  color: #848c99;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 300;
+}
+
+.buy-and-sell-icon {
+  width: 50px;
+
+  g {
+    fill: $color-danger;
+  }
+}
+
+.tickets-icon {
+  width: 60px;
+
+  g {
+    g {
+      fill: $color-danger;
+      stroke: $color-danger;
+    }
   }
 }

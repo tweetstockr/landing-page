@@ -27,11 +27,48 @@ body
 
   .content
     .container-fluid
-      h2 Buy & Sell Twitter Shares
-      h3 Check Twitter Trends in Real-Time, buy & sell in the right time.
+      h2.content__title
+        | How it works
+      
+      .row.content-block
+        .col-md-6
+          include ./icons/buy-and-sell
+          
+          h3.content-block__title
+            | Buy and sell stocks
+          
+          p.content-block__text
+            | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          
+          p.content-block__text
+            | Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-      img(src="images/tweetstockr-iPad-Macbook-Mockup.png", alt="")
-
+        .col-md-6
+          img(src="images/macbook-tweetstockr.png" class="mockup")
+        
+      .row.content-block
+        .col-md-7
+          ul(class="carousel")
+            li(class="carousel-item carousel-item__center")
+              img(src="images/paypal-reward-10.png")
+            
+            li(class="carousel-item carousel-item__right")
+              img(src="images/paypal-reward-20.png")
+            
+            li(class="carousel-item carousel-item__left")
+              img(src="images/xbox-live-subscription.png")
+        
+        .col-md-5
+          include ./icons/ticket-icon
+          
+          h3.content-block__title
+            | Earn tickets and exchange them for real rewards
+          
+          p.content-block__text
+            | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          
+          p.content-block__text
+            | Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
   include ./partials/footer
 
   script(sr="bower/jquery/dist/jquery.min.js")

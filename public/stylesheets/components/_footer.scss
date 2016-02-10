@@ -1,29 +1,79 @@
 .footer {
-  background: url('../images/waves.png') top center;
-  background-size: cover;
   text-align: center;
-  padding-top: 400px;
-  padding-bottom: 30px;
+  background-color: $color-primary;
+  padding-top: 75px;
+  padding-bottom: 100px;
 
-  p {
-    color: $white;
-    margin-bottom: 0;
+  @include breakpoint(tablet) {
+    text-align: left;
   }
 }
 
+.footer-item {
+  display: inline-block;
+}
+
+.footer-copyrights {
+  color: rgba($white, .6);
+  margin-top: 50px;
+  font-size: 12px;
+  margin-bottom: 0;
+}
+
 .footer-links {
-  padding: 0;
-  margin-bottom: 25px;
+  margin-top: 30px;
 
-  li {
-    display: inline-block;
-    width: 35px;
-    margin-left: 10px;
-    margin-right: 10px;
+  @include breakpoint(tablet) {
+    margin-top: 5px;
+  }
+}
 
-    svg,
-    path {
+.footer-links__link {
+  color: rgba($white, .6);
+  font-weight: 400;
+  padding-left: 5px;
+  padding-right: 5px;
+  transition: .25s ease-in-out;
+
+  &:hover {
+    color: $white;
+    text-decoration: none;
+  }
+
+  @include breakpoint(tablet) {
+    margin-right: 30px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.footer-social {
+  text-align: center;
+  margin-top: 30px;
+
+  @include breakpoint(tablet) {
+    text-align: right;
+    margin-top: 0;
+  }
+}
+
+.footer-social-link {
+  svg {
+    width: 25px;
+    margin-left: 15px;
+
+    &:hover {
       fill: $white;
-    }    
+
+      path {
+        fill: $white;
+      }
+    }
+  }
+
+  svg,
+  path {
+    fill: rgba($white, .6);
+    transition: .25s ease-in-out;
   }
 }
