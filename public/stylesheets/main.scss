@@ -53,6 +53,11 @@
 .carousel {
   position: relative;
   margin-top: 80px;
+  display: none;
+
+  @include breakpoint(tablet) {
+    display: block;
+  }
 }
 
 .carousel-item {
