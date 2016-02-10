@@ -1,15 +1,49 @@
 footer.footer
-  ul.footer-links
-    li
-      a(href="")
-        include ./../icons/twitter
+  .container-fluid
+    .row
+      .col-md-1
+        .footer-logo
+          include ./../icons/logo-icon
+        
+      .col-md-7
+        ul.footer-links
+          li.footer-item
+            a(href="contact.html" class="footer-links__link")
+              | Contact
+          
+          li.footer-item
+            a(href="about.html" class="footer-links__link")
+              | About Us
+          
+          //- li.footer-item
+          //-   a(href="" class="footer-links__link")
+          //-     | Press
+              
+          li.footer-item
+            a(href="releases.html" class="footer-links__link")
+              | Releases
+          
+          li.footer-item
+            a(href="status.html" class="footer-links__link")
+              | Status
+              
+          li.footer-item
+            a(href="legal.html" class="footer-links__link")
+              | Legal Terms
+        
+      .col-md-4
+        ul.footer-social
+          li.footer-item
+            a(href="https://twitter.com/tweetstockr" class="footer-social-link")
+              include ./../icons/twitter
 
-    li
-      a(href="")
-        include ./../icons/facebook
+          li.footer-item
+            a(href="https://www.facebook.com/tweetstockr" class="footer-social-link")
+              include ./../icons/facebook
 
-    li
-      a(href="")
-        include ./../icons/github
+          li.footer-item
+            a(href="https://github.com/tweetstockr" class="footer-social-link")
+              include ./../icons/github
 
-  p © Copyright 2016 Tweetstockr
+      .col-md-12
+        p.footer-copyrights Copyright © 2016, Tweetstockr. All rights reserved.

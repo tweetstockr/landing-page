@@ -11,10 +11,12 @@
 @import "layout/cover";
 @import "layout/graph";
 @import "layout/nav";
-@import "layout/about";
 @import "layout/press";
 @import "layout/team";
 @import "layout/earn";
+
+@import "pages/about";
+@import "pages/contact";
 
 .graph  {
   .ct-line,
@@ -46,36 +48,5 @@
       font-size: 26px;
       margin-top: 20px;
     }
-  }
-}
-
-.contact {
-  padding-top: 175px;
-  max-width: 770px;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  padding-bottom: 75px;
-
-  h1 {
-    font-size: 50px;
-    font-weight: 300;
-    color: $color-primary;
-  }
-
-  h2 {
-    font-size: 20px;
-    margin-bottom: 50px;
-    font-weight: 300;
-  }
-
-  .form-control {
-    height: 65px;
-    margin-bottom: 30px;
-  }
-
-  .btn {
-    height: 65px;
-    font-size: 20px;
   }
 }
