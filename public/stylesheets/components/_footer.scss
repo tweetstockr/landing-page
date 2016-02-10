@@ -61,15 +61,19 @@
   svg {
     width: 25px;
     margin-left: 15px;
+
+    &:hover {
+      fill: $white;
+
+      path {
+        fill: $white;
+      }
+    }
   }
 
   svg,
   path {
     fill: rgba($white, .6);
     transition: .25s ease-in-out;
-
-    &:hover {
-      fill: $white;
-    }
   }
 }
