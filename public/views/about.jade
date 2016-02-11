@@ -8,41 +8,31 @@ head
 body
   include ./partials/header.jade
 
-  section.team
-    .container-fluid
-      .col-md-6
-        img(src="images/bukinoshita.jpg", alt="")
-        a(href="") @BuKinoshita
-
-      .col-md-6
-        img(src="images/rapha.jpg", alt="")
-        a(href="") @raphaelgmelo
-
   section.about
     .container-fluid
-      h1 About us
+      h1.about__title About us
 
-      p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae dolorem earum molestiae ipsum id, voluptas ipsam nobis, odio dolorum perferendis nulla, deleniti laborum ratione. Et reprehenderit nemo autem doloremque harum?
+      p.about__text Tweetstockr is an Open Source Trending Topics Stock Market game.
       
       ul
-        li
-          a(href="")
+        li.about-social__item
+          a(href="https://twitter.com/tweetstockr")
             include ./icons/twitter
 
-        li
-          a(href="")
+        li.about-social__item
+          a(href="https://www.facebook.com/tweetstockr")
             include ./icons/facebook
 
-        li
-          a(href="")
+        li.about-social__item
+          a(href="https://github.com/tweetstockr")
             include ./icons/github
 
   section.press
     .container-fluid
       ul
-        li
+        li.about-press__item
           img(src="images/betalist.png", alt="")
-        li
+        li.about-press__item
           img(src="images/product-hunt.png", alt="")
 
   include ./partials/footer
