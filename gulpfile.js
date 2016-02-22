@@ -43,6 +43,11 @@ var paths = {
   , images: {
       input: 'public/images/*'
     , output: 'dist/images'
+  },
+
+  cname: {
+      input: './CNAME'
+    , output: 'dist/'
   }
 
   , deploy: 'dist/**/*'
@@ -104,6 +109,12 @@ gulp.task('build:images', function() {
     .pipe(gulp.dest(paths.images.output));
 });
 
+gulp.task('helper:cname', function() {
+  return gulp.src(paths.cname.input)
+    .pipe(plumber())
+    .pipe(gulp.dest(paths.cname.output));
+});
+
 // Spin up livereload server and listen for file changes
 gulp.task('listen', function () {
   livereload.listen();
@@ -129,6 +140,7 @@ gulp.task('compile', [
   , 'build:styles'
   , 'build:scripts'
   , 'build:images'
+  , 'helper:cname'
 ]);
 
 // Compile files and generate docs (default)

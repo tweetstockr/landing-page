@@ -1,6 +1,6 @@
 'use strict';
 
-var socket = io('http://api.tweetstockr.com/'); // Este é o endereço da API
+var socket = io('http://localhost:4000/'); // Este é o endereço da API
 
 socket.on('connect', function(){
   console.log('connected!');
@@ -9,9 +9,7 @@ socket.on('connect', function(){
 
 var data = {
     labels: []
-  , series: [
-      []
-    ]
+  , series: [[]]
 };
 
 var seq = 0
@@ -28,7 +26,21 @@ socket.on('update', function(msg) {
     var minutes = new Date(trend.history[i].created).getMinutes();
     var time = hours + ':' + minutes;
 
+    if(graphData.length > 10) {
+      console.log('nice1');
+
+      var graphStart = graphData.length - 10;
+      var graphEnd = graphData.length + 1;
+
+      data = graphData.slice(graphStart, graphEnd);
+      console.log(data);
+    } else {
+      console.log('nice2');
+      console.log(price)
+    }
+
     graphData.push(price);
+
     data.labels.push(time);
   }
 
