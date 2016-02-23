@@ -9,8 +9,7 @@ var seq = 0
   , delays = 80
   , durations = 500;
 
-$.get( "http://api.tweetstockr.com/stocks", function(msg){
-
+$.get('http://api.tweetstockr.com/stocks', function(msg){
   var trend = msg.stocks[0];
   var graphData = data.series[0];
 
@@ -21,19 +20,13 @@ $.get( "http://api.tweetstockr.com/stocks", function(msg){
     var time = hours + ':' + minutes;
 
     if(graphData.length > 10) {
-      console.log('nice1');
-
       var graphStart = graphData.length - 10;
       var graphEnd = graphData.length + 1;
 
       data = graphData.slice(graphStart, graphEnd);
-      console.log(data);
     } else {
-      console.log('nice2');
-      console.log(price)
+      graphData.push(price);
     }
-
-    graphData.push(price);
 
     data.labels.push(time);
   }
