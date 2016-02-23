@@ -1,12 +1,5 @@
 'use strict';
 
-var socket = io('http://localhost:4000/'); // Este é o endereço da API
-
-socket.on('connect', function(){
-  console.log('connected!');
-  socket.emit('update-me');
-});
-
 var data = {
     labels: []
   , series: [[]]
@@ -16,8 +9,9 @@ var seq = 0
   , delays = 80
   , durations = 500;
 
-socket.on('update', function(msg) {
-  var trend = msg[0];
+$.get( "http://api.tweetstockr.com/stocks", function(msg){
+
+  var trend = msg.stocks[0];
   var graphData = data.series[0];
 
   for(var i = 9; i > 0; i--) {
