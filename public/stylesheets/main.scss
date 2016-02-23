@@ -51,11 +51,7 @@
 
 .carousel {
   position: relative;
-  display: none;
-
-  @include breakpoint(tablet) {
-    display: block;
-  }
+  min-height: 540px;
 }
 
 .carousel-item {
