@@ -6,7 +6,7 @@
   margin-right: auto;
   background-color: $white;
   border: 1px solid #ddd;
-  width: 250px;
+  width: 300px;
   bottom: -75px;
   height: 175px;
   border-radius: 3px;
@@ -22,5 +22,36 @@
     width: 750px;
     border-radius: 5px;
     bottom: -100px;
-  }  
+  }
+
+  .ct-line,
+  .ct-point {
+    stroke: $color-primary;
+  }
+
+  .ct-area {
+    fill: $color-primary;
+  }
+
+  .ct-chart-line {
+    top: 5px;
+
+    @include breakpoint(desktop) {
+      top: 70px;
+      height: 300px !important;
+    }
+  }
+
+  h3 {
+    display: none;
+
+    @include breakpoint(desktop) {
+      display: block;
+      margin-left: 30px;
+      font-weight: 300;
+      color: $color-primary;
+      font-size: 26px;
+      margin-top: 20px;
+    }
+  }
 }
