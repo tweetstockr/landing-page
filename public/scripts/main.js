@@ -9,14 +9,14 @@ var seq = 0
   , delays = 80
   , durations = 500;
 
-$.get('http://api.tweetstockr.com/stocks', function(msg){
+$.get('http://api.tweetstockr.com/stocks', function(msg) {
   var trend = msg.stocks[0];
   var graphData = data.series[0];
 
   for(var i = 9; i > 0; i--) {
     var price = trend.history[i].price;
-    var hours = new Date(trend.history[i].created).getHours();
-    var minutes = new Date(trend.history[i].created).getMinutes();
+    var hours = new Date(trend.history[i].created_at).getHours();
+    var minutes = new Date(trend.history[i].created_at).getMinutes();
     var time = hours + ':' + minutes;
 
     if(graphData.length > 10) {

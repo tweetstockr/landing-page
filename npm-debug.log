@@ -1,22 +1,40 @@
 0 info it worked if it ends with ok
-1 verbose cli [ '/usr/local/bin/iojs', '/usr/local/bin/npm', 'run', 'deploy' ]
+1 verbose cli [ '/usr/local/bin/iojs',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'run',
+1 verbose cli   'build:minor' ]
 2 info using npm@2.14.7
 3 info using node@v4.2.3
-4 verbose stack Error: missing script: deploy
-4 verbose stack     at run (/usr/local/lib/node_modules/npm/lib/run-script.js:142:19)
-4 verbose stack     at /usr/local/lib/node_modules/npm/lib/run-script.js:58:5
-4 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-package-json/read-json.js:345:5
-4 verbose stack     at checkBinReferences_ (/usr/local/lib/node_modules/npm/node_modules/read-package-json/read-json.js:309:45)
-4 verbose stack     at final (/usr/local/lib/node_modules/npm/node_modules/read-package-json/read-json.js:343:3)
-4 verbose stack     at then (/usr/local/lib/node_modules/npm/node_modules/read-package-json/read-json.js:113:5)
-4 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-package-json/read-json.js:232:12
-4 verbose stack     at FSReqWrap.readFileAfterClose [as oncomplete] (evalmachine.<anonymous>:380:3)
-5 verbose cwd /Users/buuh7921/github/tweetstockr/landing-page
-6 error Darwin 15.3.0
-7 error argv "/usr/local/bin/iojs" "/usr/local/bin/npm" "run" "deploy"
-8 error node v4.2.3
-9 error npm  v2.14.7
-10 error missing script: deploy
-11 error If you need help, you may report this error at:
-11 error     <https://github.com/npm/npm/issues>
-12 verbose exit [ 1, true ]
+4 verbose run-script [ 'prebuild:minor', 'build:minor', 'postbuild:minor' ]
+5 info prebuild:minor landing-page@0.1.2
+6 info build:minor landing-page@0.1.2
+7 verbose unsafe-perm in lifecycle true
+8 info landing-page@0.1.2 Failed to exec build:minor script
+9 verbose stack Error: landing-page@0.1.2 build:minor: `npm version minor && npm run pub`
+9 verbose stack Exit status 1
+9 verbose stack     at EventEmitter.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/lifecycle.js:214:16)
+9 verbose stack     at emitTwo (events.js:87:13)
+9 verbose stack     at EventEmitter.emit (events.js:172:7)
+9 verbose stack     at ChildProcess.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/spawn.js:24:14)
+9 verbose stack     at emitTwo (events.js:87:13)
+9 verbose stack     at ChildProcess.emit (events.js:172:7)
+9 verbose stack     at maybeClose (internal/child_process.js:818:16)
+9 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:211:5)
+10 verbose pkgid landing-page@0.1.2
+11 verbose cwd /Users/buuh7921/github/tweetstockr/landing-page
+12 error Darwin 15.5.0
+13 error argv "/usr/local/bin/iojs" "/usr/local/bin/npm" "run" "build:minor"
+14 error node v4.2.3
+15 error npm  v2.14.7
+16 error code ELIFECYCLE
+17 error landing-page@0.1.2 build:minor: `npm version minor && npm run pub`
+17 error Exit status 1
+18 error Failed at the landing-page@0.1.2 build:minor script 'npm version minor && npm run pub'.
+18 error This is most likely a problem with the landing-page package,
+18 error not with npm itself.
+18 error Tell the author that this fails on your system:
+18 error     npm version minor && npm run pub
+18 error You can get their info via:
+18 error     npm owner ls landing-page
+18 error There is likely additional logging output above.
+19 verbose exit [ 1, true ]
