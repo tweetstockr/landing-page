@@ -9,7 +9,7 @@ var seq = 0
   , delays = 80
   , durations = 500;
 
-$.get('http://api.tweetstockr.com/stocks', function(msg) {
+$.get('http://play.tweetstockr.com/api/stocks', function(msg) {
   var trend = msg.stocks[0];
   var graphData = data.series[0];
 
